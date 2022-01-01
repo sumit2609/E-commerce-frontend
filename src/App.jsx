@@ -1,16 +1,27 @@
 import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import './App.css'
 import Home from './pages/Home'
-import ProductList from './pages/ProductList'
-import Product from './pages/Product'
-import Register from './pages/Register'
-import Login from './pages/Login'
-import Cart from './pages/Cart'
+// import ProductList from './pages/ProductList'
+// import Product from './pages/Product'
+// import Register from './pages/Register'
+// import Login from './pages/Login'
+// import Cart from './pages/Cart'
 
 export default function App() {
   return (
-    <Home/>
-  )
+    <Router>
+      <Switch>
+        <Route path="/" >
+          <Home/>
+        </Route>
+      </Switch>
+    </Router> 
+  );
 }
 
 
